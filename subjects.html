@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدرسة الدي حسين - مؤسسة تعليمية رائدة تهدف إلى تخريج جيل متميز أكاديمياً وخلقياً">
+    <title>مدرسة الداي حسين - المواد الدراسية</title>
+    <link rel="icon" type="image/png" href="assets/mini-logo.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="assets/images/hero-bg.webp" as="image">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c5f8b;
+            --primary-light: #3a7cb9;
+            --secondary-color: #f8f9fa;
+            --accent-color: #e63946;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+            --text-color: #333333;
+            --text-light: #6c757d;
+            --font-base: 'Tajawal', sans-serif;
+            --border-radius-sm: 0.25rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-base);
+            color: var(--text-color);
+            background-color: var(--gray-100);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header Styles */
+        .main-header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            transition: all var(--transition-normal);
+        }
+
+        .main-header.scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .logo img {
+            height: 60px;
+            width: 60px;
+            margin-left: var(--space-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .main-header.scrolled .logo img {
+            height: 50px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--primary-color);
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-sm);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--border-radius-sm);
+            transition: all var(--transition-fast);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--white);
+            background-color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--border-radius-sm);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+        }
+
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color);
+            position: relative;
+            transition: all var(--transition-normal);
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color);
+            transition: all var(--transition-normal);
+        }
+
+        .hamburger::before {
+            top: -6px;
+        }
+
+        .hamburger::after {
+            top: 6px;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger {
+            background-color: transparent;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        /* Banner Section */
+        .page-banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('assets/images/subjects-bg.webp');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: var(--space-xl) 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-sm);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-banner p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Tabs Section */
+        .subjects-section {
+            padding: var(--space-xl) 0;
+            background-color: var(--secondary-color);
+        }
+
+        .tabs {
+            background-color: var(--white);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        .tab-buttons {
+            display: flex;
+            background-color: var(--gray-200);
+        }
+
+        .tab-btn {
+            padding: var(--space-md) var(--space-lg);
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-base);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-color);
+            transition: all var(--transition-normal);
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .tab-btn:focus {
+            outline: 2px solid var(--primary-light);
+            outline-offset: -2px;
+        }
+
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 3px;
+            background-color: var(--primary-color);
+            transition: width var(--transition-normal);
+        }
+
+        .tab-btn:hover::after,
+        .tab-btn.active::after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+
+        .tab-btn.active {
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+
+        .tab-content {
+            padding: var(--space-xl);
+            display: none;
+            animation: fadeIn var(--transition-normal) ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Filter Controls */
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-lg);
+        }
+
+        .grade-selector, .stream-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .grade-btn, .stream-btn {
+            padding: var(--space-xs) var(--space-sm);
+            background-color: var(--gray-200);
+            border: none;
+            border-radius: var(--border-radius-sm);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-family: var(--font-base);
+            font-size: 0.9rem;
+        }
+
+        .grade-btn:focus, .stream-btn:focus {
+            outline: 2px solid var(--primary-light);
+        }
+
+        .grade-btn:hover, .stream-btn:hover {
+            background-color: var(--gray-300);
+        }
+
+        .grade-btn.active, .stream-btn.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* Subjects Grid */
+        .subjects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-md);
+        }
+
+        .subject-card {
+            background-color: var(--white);
+            padding: var(--space-md);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .subject-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .subject-header {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+        }
+
+        .subject-header i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(44, 95, 139, 0.1);
+            border-radius: 50%;
+        }
+
+        .subject-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 0;
+        }
+
+        .subject-meta {
+            margin-bottom: var(--space-sm);
+            font-size: 0.9rem;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .subject-meta strong {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Teachers Section */
+        .teachers-section {
+            padding: var(--space-xl) 0;
+            background-color: var(--white);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .teacher-card {
+            background-color: var(--white);
+            padding: var(--space-md);
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .teacher-card img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto var(--space-sm);
+            border: 3px solid var(--primary-color);
+            transition: all var(--transition-normal);
+        }
+
+        .teacher-card:hover img {
+            transform: scale(1.05);
+        }
+
+        .teacher-card h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-xs);
+        }
+
+        .teacher-card p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        /* Footer Styles */
+        .main-footer {
+            background-color: var(--gray-800);
+            color: var(--white);
+        }
+
+        .footer-top {
+            padding: var(--space-xl) 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            font-size: 1.25rem;
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-col p {
+            color: var(--gray-400);
+            margin-bottom: var(--space-md);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: var(--gray-700);
+            color: var(--white);
+            border-radius: 50%;
+            transition: all var(--transition-fast);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-col a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+            padding-right: var(--space-xs);
+        }
+
+        .contact-info li, .working-hours li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-sm);
+            color: var(--gray-400);
+        }
+
+        .contact-info i, .working-hours i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            background-color: var(--gray-900);
+            padding: var(--space-md) 0;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .copyright {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .footer-links a {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: var(--space-md);
+            left: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .subjects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .teachers-grid {
+                grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                position: absolute;
+                top: var(--space-md);
+                left: var(--space-md);
+            }
+            
+            .nav-list {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: var(--space-xl);
+                box-shadow: var(--shadow-lg);
+                transition: right var(--transition-normal);
+                z-index: 999;
+            }
+            
+            .nav-list.active {
+                right: 0;
+            }
+            
+            .tab-buttons {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                padding: var(--space-sm) var(--space-md);
+                text-align: right;
+            }
+            
+            .filter-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .grade-selector, .stream-selector {
+                width: 100%;
+                overflow-x: auto;
+                padding-bottom: var(--space-xs);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .page-banner p {
+                font-size: 1rem;
+            }
+            
+            .tab-content {
+                padding: var(--space-md);
+            }
+            
+            .subjects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .teachers-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-xs);
+            }
+        }
+
+        /* Accessibility Improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        [aria-current="page"] {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Focus styles for better accessibility */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid var(--primary-light);
+            outline-offset: 2px;
+        }
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Disclaimer Bar Styles */
+        .disclaimer-bar {
+            background-color: var(--gray-900);
+            padding: 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .disclaimer-text {
+            color: var(--white);
+            font-size: 0.8rem;
+            line-height: 1.5;
+            text-align: center;
+            margin: 0;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .disclaimer-text {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى الرئيسي</a>
+    
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="شعار مدرسة الداي حسين" width="120" height="60">
+                    <div class="logo-text">
+                        <h1>مدرسة الداي حسين</h1>
+                        <p>نحن نبني قادة المستقبل</p>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="main-nav" aria-label="القائمة الرئيسية">
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-label="قائمة التنقل">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">قائمة التنقل</span>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" >الرئيسية</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="subjects.html" class="nav-link active" aria-current="page">المواد الدراسية</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                    <li><a href="#" class="btn btn-primary">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Subjects Banner -->
+    <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('assets/images/subjects-bg.jpg')">
+        <div class="container">
+            <h1>المواد الدراسية</h1>
+            <p>اكتشف مناهجنا وكوادرنا التعليمية</p>
+        </div>
+    </section>
+
+    <main id="main-content">
+        <!-- Subjects Tabs -->
+        <section class="subjects-section">
+            <div class="container">
+                <div class="tabs">
+                    <div class="tab-buttons" role="tablist" aria-label="مراحل التعليم">
+                        <button class="tab-btn active" data-tab="primary" role="tab" aria-selected="true" aria-controls="primary-tab" id="primary-tab-btn">المرحلة الابتدائية</button>
+                        <button class="tab-btn" data-tab="middle" role="tab" aria-selected="false" aria-controls="middle-tab" id="middle-tab-btn">المرحلة المتوسطة</button>
+                        <button class="tab-btn" data-tab="secondary" role="tab" aria-selected="false" aria-controls="secondary-tab" id="secondary-tab-btn">المرحلة الثانوية</button>
+                    </div>
+
+                    <!-- Primary Stage -->
+                    <div class="tab-content active" id="primary-tab" role="tabpanel" aria-labelledby="primary-tab-btn">
+                        <div class="filter-controls">
+                            <div class="grade-selector">
+                                <button class="grade-btn active" data-grade="all">كل السنوات</button>
+                                <button class="grade-btn" data-grade="1">السنة الأولى</button>
+                                <button class="grade-btn" data-grade="2">السنة الثانية</button>
+                                <button class="grade-btn" data-grade="3">السنة الثالثة</button>
+                                <button class="grade-btn" data-grade="4">السنة الرابعة</button>
+                                <button class="grade-btn" data-grade="5">السنة الخامسة</button>
+                            </div>
+                        </div>
+
+                        <div class="subjects-grid">
+                            <!-- Year 1-3 Subjects -->
+                            <div class="subject-card" data-grades="1,2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                                    <h3>اللغة العربية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.سامية بن عمر، أ.عبد القادر بلقاسم</p>
+                                    <p><strong>السنوات:</strong> 1-3 ابتدائي</p>
+                                </div>
+                                <p>تعلم أساسيات القراءة والكتابة ومهارات التواصل باللغة العربية الفصحى.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة اللغة العربية">المزيد</a>
+                            </div>
+
+                            <div class="subject-card" data-grades="1,2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                                    <h3>الرياضيات</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.محمد بن زواوي، أ.نور الدين قاسمي</p>
+                                    <p><strong>السنوات:</strong> 1-3 ابتدائي</p>
+                                </div>
+                                <p>تعلم الأعداد والعمليات الحسابية الأساسية والمفاهيم الهندسية البسيطة.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة الرياضيات">المزيد</a>
+                            </div>
+
+                            <!-- Year 4-5 Subjects -->
+                            <div class="subject-card" data-grades="4,5">
+                                <div class="subject-header">
+                                    <i class="fas fa-language" aria-hidden="true"></i>
+                                    <h3>اللغة الفرنسية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.ليلى بوعلام، أ.سارة بنت علي</p>
+                                    <p><strong>السنوات:</strong> 4-5 ابتدائي</p>
+                                </div>
+                                <p>تعلم أساسيات اللغة الفرنسية ومهارات التواصل الأساسية.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة اللغة الفرنسية">المزيد</a>
+                            </div>
+
+                            <div class="subject-card" data-grades="4,5">
+                                <div class="subject-header">
+                                    <i class="fas fa-seedling" aria-hidden="true"></i>
+                                    <h3>العلوم</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.سميرة قاسمي، أ.نور الدين زواوي</p>
+                                    <p><strong>السنوات:</strong> 4-5 ابتدائي</p>
+                                </div>
+                                <p>دراسة مبادئ العلوم الطبيعية من خلال التجارب والملاحظة.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة العلوم">المزيد</a>
+                            </div>
+
+                            <!-- Additional Subjects -->
+                            <div class="subject-card" data-grades="1,2,3,4,5">
+                                <div class="subject-header">
+                                    <i class="fas fa-mosque" aria-hidden="true"></i>
+                                    <h3>التربية الإسلامية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.عبد القادر بلقاسم، أ.فاطمة الزهراء</p>
+                                    <p><strong>السنوات:</strong> 1-5 ابتدائي</p>
+                                </div>
+                                <p>تعلم مبادئ الدين الإسلامي وأحكامه وآدابه بشكل مبسط.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة التربية الإسلامية">المزيد</a>
+                            </div>
+
+                            <div class="subject-card" data-grades="1,2,3,4,5">
+                                <div class="subject-header">
+                                    <i class="fas fa-palette" aria-hidden="true"></i>
+                                    <h3>التربية الفنية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.فاطمة الزهراء، أ.أمينة بنت علي</p>
+                                    <p><strong>السنوات:</strong> 1-5 ابتدائي</p>
+                                </div>
+                                <p>تنمية المهارات الفنية والإبداعية من خلال الرسم والأشغال اليدوية.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة التربية الفنية">المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Middle Stage -->
+                    <div class="tab-content" id="middle-tab" role="tabpanel" aria-labelledby="middle-tab-btn" hidden>
+                        <div class="filter-controls">
+                            <div class="grade-selector">
+                                <button class="grade-btn active" data-grade="all">كل السنوات</button>
+                                <button class="grade-btn" data-grade="1">السنة الأولى</button>
+                                <button class="grade-btn" data-grade="2">السنة الثانية</button>
+                                <button class="grade-btn" data-grade="3">السنة الثالثة</button>
+                                <button class="grade-btn" data-grade="4">السنة الرابعة</button>
+                            </div>
+                        </div>
+
+                        <div class="subjects-grid">
+                            <!-- Core Subjects -->
+                            <div class="subject-card" data-grades="1,2,3,4">
+                                <div class="subject-header">
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                                    <h3>اللغة العربية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.خالد بوعلام، أ.عبد الكريم بوعلام</p>
+                                    <p><strong>السنوات:</strong> 1-4 متوسط</p>
+                                </div>
+                                <p>تعميق فهم النصوص الأدبية وتطوير مهارات التعبير الكتابي والشفوي.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة اللغة العربية للمرحلة المتوسطة">المزيد</a>
+                            </div>
+
+                            <div class="subject-card" data-grades="1,2,3,4">
+                                <div class="subject-header">
+                                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                                    <h3>الرياضيات</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.عبد الرحيم قاسمي، أ.رشيد بن زواوي</p>
+                                    <p><strong>السنوات:</strong> 1-4 متوسط</p>
+                                </div>
+                                <p>دراسة الجبر والهندسة والإحصاء بمستويات متقدمة.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة الرياضيات للمرحلة المتوسطة">المزيد</a>
+                            </div>
+
+                            <!-- Science Subjects -->
+                            <div class="subject-card" data-grades="1,2,3,4">
+                                <div class="subject-header">
+                                    <i class="fas fa-flask" aria-hidden="true"></i>
+                                    <h3>العلوم الفيزيائية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.نور الدين زواوي، أ.أمين بن زواوي</p>
+                                    <p><strong>السنوات:</strong> 1-4 متوسط</p>
+                                </div>
+                                <p>دراسة الفيزياء والكيمياء من خلال التجارب العملية.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة العلوم الفيزيائية">المزيد</a>
+                            </div>
+
+                            <div class="subject-card" data-grades="1,2,3,4">
+                                <div class="subject-header">
+                                    <i class="fas fa-dna" aria-hidden="true"></i>
+                                    <h3>علوم الطبيعة والحياة</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.سميرة قاسمي، أ.فاطمة بوعلام</p>
+                                    <p><strong>السنوات:</strong> 1-4 متوسط</p>
+                                </div>
+                                <p>دراسة الأحياء والجيولوجيا وعلوم الأرض.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة علوم الطبيعة والحياة">المزيد</a>
+                            </div>
+
+                            <!-- Additional Subjects -->
+                            <div class="subject-card" data-grades="1,2,3,4">
+                                <div class="subject-header">
+                                    <i class="fas fa-language" aria-hidden="true"></i>
+                                    <h3>اللغة الفرنسية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.سارة بنت علي، أ.ليلى بوعلام</p>
+                                    <p><strong>السنوات:</strong> 1-4 متوسط</p>
+                                </div>
+                                <p>تعميق المعرفة باللغة الفرنسية وتطوير مهارات التواصل.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة اللغة الفرنسية للمرحلة المتوسطة">المزيد</a>
+                            </div>
+
+                            <div class="subject-card" data-grades="1,2,3,4">
+                                <div class="subject-header">
+                                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                                    <h3>الإعلام الآلي</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.أمين بن زواوي، أ.خالد بوعلام</p>
+                                    <p><strong>السنوات:</strong> 1-4 متوسط</p>
+                                </div>
+                                <p>تعلم أساسيات الحاسوب والبرمجة وتكنولوجيا المعلومات.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة الإعلام الآلي">المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Stage -->
+                    <div class="tab-content" id="secondary-tab" role="tabpanel" aria-labelledby="secondary-tab-btn" hidden>
+                        <div class="filter-controls">
+                            <div class="stream-selector">
+                                <button class="stream-btn active" data-stream="all">كل الشعب</button>
+                                <button class="stream-btn" data-stream="science">علوم تجريبية</button>
+                                <button class="stream-btn" data-stream="maths">رياضيات</button>
+                                <button class="stream-btn" data-stream="letters">آداب وفلسفة</button>
+                                <button class="stream-btn" data-stream="languages">لغات أجنبية</button>
+                                <button class="stream-btn" data-stream="informatics">إعلام آلي</button>
+                            </div>
+                            
+                            <div class="grade-selector">
+                                <button class="grade-btn active" data-grade="all">كل السنوات</button>
+                                <button class="grade-btn" data-grade="1">السنة الأولى</button>
+                                <button class="grade-btn" data-grade="2">السنة الثانية</button>
+                                <button class="grade-btn" data-grade="3">السنة الثالثة</button>
+                            </div>
+                        </div>
+
+                        <div class="subjects-grid">
+                            <!-- Common Subjects -->
+                            <div class="subject-card" data-streams="all" data-grades="1,2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-book-open" aria-hidden="true"></i>
+                                    <h3>اللغة العربية وآدابها</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.عبد الكريم مسنادي، أ.خالد بوعلام</p>
+                                    <p><strong>الشعب:</strong> جميع الشعب</p>
+                                </div>
+                                <p>دراسة متعمقة للأدب العربي والنصوص الأدبية وتحليلها ونقدها.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة اللغة العربية وآدابها للمرحلة الثانوية">المزيد</a>
+                            </div>
+
+                            <div class="subject-card" data-streams="all" data-grades="1,2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-language" aria-hidden="true"></i>
+                                    <h3>اللغة الإنجليزية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.سارة بنت علي، أ.أمينة بنت علي</p>
+                                    <p><strong>الشعب:</strong> جميع الشعب</p>
+                                </div>
+                                <p>تعليم متقدم للغة الإنجليزية مع التركيز على مهارات التواصل الأكاديمي.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة اللغة الإنجليزية للمرحلة الثانوية">المزيد</a>
+                            </div>
+
+                            <!-- Science Stream -->
+                            <div class="subject-card" data-streams="science,maths" data-grades="1,2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-flask" aria-hidden="true"></i>
+                                    <h3>العلوم الفيزيائية</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.نور الدين زواوي، أ.أمين بن زواوي</p>
+                                    <p><strong>الشعب:</strong> علوم تجريبية، رياضيات</p>
+                                </div>
+                                <p>دراسة متعمقة للفيزياء والكيمياء مع التركيز على التجارب المعملية.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة العلوم الفيزيائية للمرحلة الثانوية">المزيد</a>
+                            </div>
+
+                            <!-- Maths Stream -->
+                            <div class="subject-card" data-streams="maths" data-grades="2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-calculator" aria-hidden="true"></i>
+                                    <h3>الرياضيات المتقدمة</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.رشيد بن زواوي، أ.عبد الرحيم قاسمي</p>
+                                    <p><strong>الشعب:</strong> رياضيات</p>
+                                </div>
+                                <p>دراسة متقدمة في الجبر والتحليل الرياضي والهندسة والإحصاء.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة الرياضيات المتقدمة">المزيد</a>
+                            </div>
+
+                            <!-- Letters Stream -->
+                            <div class="subject-card" data-streams="letters" data-grades="2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-brain" aria-hidden="true"></i>
+                                    <h3>الفلسفة</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.خالد بوعلام، أ.عبد الكريم بوعلام</p>
+                                    <p><strong>الشعب:</strong> آداب وفلسفة</p>
+                                </div>
+                                <p>دراسة المناهج الفلسفية وتطور الفكر الإنساني عبر العصور.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة الفلسفة">المزيد</a>
+                            </div>
+
+                            <!-- Languages Stream -->
+                            <div class="subject-card" data-streams="languages" data-grades="2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-globe-europe" aria-hidden="true"></i>
+                                    <h3>اللغة الفرنسية المتقدمة</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.ليلى بوعلام، أ.سارة بنت علي</p>
+                                    <p><strong>الشعب:</strong> لغات أجنبية</p>
+                                </div>
+                                <p>دراسة متقدمة للأدب الفرنسي وتحليل النصوص.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة اللغة الفرنسية المتقدمة">المزيد</a>
+                            </div>
+                            
+                            <!-- Informatics Stream -->
+                            <div class="subject-card" data-streams="informatics" data-grades="2,3">
+                                <div class="subject-header">
+                                    <i class="fas fa-laptop-code" aria-hidden="true"></i>
+                                    <h3>الإعلام الآلي المتقدم</h3>
+                                </div>
+                                <div class="subject-meta">
+                                    <p><strong>المعلمون:</strong> أ.أمين رحماني</p>
+                                    <p><strong>الشعب:</strong> إعلام آلي</p>
+                                </div>
+                                <p>دراسة متقدمة في البرمجة وهندسة البرمجيات وقواعد البيانات.</p>
+                                <a href="#" class="btn-link" aria-label="المزيد عن مادة الإعلام الآلي المتقدم">المزيد</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- Teachers Section -->
+        <section class="teachers-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>كادرنا التعليمي</h2>
+                    <p>معلمون متميزون بخبرات واسعة</p>
+                </div>
+                <div class="teachers-grid">
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher1.jpg" alt="الأستاذ خالد بوعلام">
+                        <h3>الأستاذ خالد بوعلام</h3>
+                        <p>اللغة العربية والفلسفة</p>
+                        <p>ماجستير في الأدب العربي - 15 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذ خالد بوعلام">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher2.jpg" alt="الأستاذة سارة بنت علي">
+                        <h3>الأستاذة سارة بنت علي</h3>
+                        <p>اللغات الأجنبية</p>
+                        <p>ماجستير في اللغويات التطبيقية - 12 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذة سارة بنت علي">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher3.jpg" alt="الأستاذ نور الدين زواوي">
+                        <h3>الأستاذ نور الدين زواوي</h3>
+                        <p>العلوم الفيزيائية</p>
+                        <p>دكتوراه في الفيزياء - 18 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذ نور الدين زواوي">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher4.jpg" alt="الأستاذة سميرة قاسمي">
+                        <h3>الأستاذة سميرة قاسمي</h3>
+                        <p>علوم الطبيعة والحياة</p>
+                        <p>ماجستير في البيولوجيا - 14 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذة سميرة قاسمي">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher5.jpg" alt="الأستاذ رشيد بن زواوي">
+                        <h3>الأستاذ رشيد بن زواوي</h3>
+                        <p>الرياضيات</p>
+                        <p>دكتوراه في الرياضيات التطبيقية - 11 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذ رشيد بن زواوي">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher6.jpg" alt="الأستاذ أمين رحماني">
+                        <h3>الأستاذ أمين رحماني</h3>
+                        <p>الإعلام الآلي</p>
+                        <p>ماجستير في هندسة البرمجيات - 10 سنوات خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذ أمين رحماني">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher7.jpg" alt="الأستاذة ليلى بوعلام">
+                        <h3>الأستاذة ليلى بوعلام</h3>
+                        <p>اللغة الفرنسية</p>
+                        <p>ماجستير في الأدب الفرنسي - 13 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذة ليلى بوعلام">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher8.jpg" alt="الأستاذ عبد الكريم مسنادي">
+                        <h3>الأستاذ عبد الكريم مسنادي</h3>
+                        <p>اللغة العربية</p>
+                        <p>ماجستير في اللغة العربية - 16 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذ عبد الكريم مسنادي">المزيد</a>
+                    </div>
+                    <div class="teacher-card">
+                        <img src="assets/images/teachers/teacher9.jpg" alt="الأستاذ عبد الرحيم قاسمي">
+                        <h3>الأستاذ عبد الرحيم قاسمي</h3>
+                        <p>الرياضيات</p>
+                        <p>ماجستير في الرياضيات - 11 سنة خبرة</p>
+                        <a href="#" class="btn-link" aria-label="المزيد عن الأستاذ عبد الرحيم قاسمي">المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن المدرسة</h3>
+                        <p>مدرسة الداي حسين مؤسسة تعليمية خاصة تأسست عام 2005 بهدف تقديم تعليم متميز في بيئة تحترم القيم الإسلامية والوطنية.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="تويتر"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="subjects.html">المواد الدراسية</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                            <li><a href="#">تسجيل الدخول</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>اتصل بنا</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> شارع العربي بن مهيدي، الجزائر العاصمة</li>
+                            <li><i class="fas fa-phone" aria-hidden="true"></i> 023456789</li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> info@elhocine-school.dz</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>ساعات العمل</h3>
+                        <ul class="working-hours">
+                            <li><i class="far fa-clock" aria-hidden="true"></i> الأحد - الخميس: 8:00 ص - 4:00 م</li>
+                            <li><i class="far fa-clock" aria-hidden="true"></i> الجمعة - السبت: مغلق</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; <span id="current-year"></span> مدرسة الداي حسين. جميع الحقوق محفوظة.</p>
+                    
+                    <div class="footer-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الاستخدام</a>
+                        <a href="#">خريطة الموقع</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="back-to-top" aria-label="العودة إلى الأعلى">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>
+    </footer>
+
+    <!-- Disclaimer -->
+
+    <nav class="disclaimer-bar">
+        <div class="container">
+          <p class="disclaimer-text">
+            هذا الموقع هو نموذج أولي تم تطويره لأغراض عرض الأعمال فقط. لا يرتبط بأي شركة حقيقية ولا يُقصد به الاستخدام التجاري. جميع المحتويات المعروضة إما خيالية أو تُستخدم لأغراض تعليمية وتوضيحية فقط.
+          </p>
+        </div>
+      </nav>
+    
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+            navList.classList.toggle('active');
+        });
+
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tabId = button.getAttribute('data-tab');
+                
+                // Update tab buttons
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    btn.setAttribute('aria-selected', 'false');
+                });
+                button.classList.add('active');
+                button.setAttribute('aria-selected', 'true');
+                
+                // Update tab contents
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    content.setAttribute('hidden', 'true');
+                });
+                
+                const activeTab = document.getElementById(`${tabId}-tab`);
+                activeTab.classList.add('active');
+                activeTab.removeAttribute('hidden');
+            });
+        });
+
+        // Grade filter functionality
+        const gradeButtons = document.querySelectorAll('.grade-btn');
+        
+        gradeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const grade = button.getAttribute('data-grade');
+                const tabContent = button.closest('.tab-content');
+                
+                // Update active button
+                gradeButtons.forEach(btn => {
+                    if (btn.closest('.tab-content') === tabContent) {
+                        btn.classList.remove('active');
+                    }
+                });
+                button.classList.add('active');
+                
+                // Filter subjects
+                const subjectCards = tabContent.querySelectorAll('.subject-card');
+                
+                subjectCards.forEach(card => {
+                    const grades = card.getAttribute('data-grades').split(',');
+                    
+                    if (grade === 'all' || grades.includes(grade)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Stream filter functionality
+        const streamButtons = document.querySelectorAll('.stream-btn');
+        
+        streamButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const stream = button.getAttribute('data-stream');
+                const tabContent = button.closest('.tab-content');
+                
+                // Update active button
+                streamButtons.forEach(btn => {
+                    if (btn.closest('.tab-content') === tabContent) {
+                        btn.classList.remove('active');
+                    }
+                });
+                button.classList.add('active');
+                
+                // Filter subjects
+                const subjectCards = tabContent.querySelectorAll('.subject-card');
+                
+                subjectCards.forEach(card => {
+                    const streams = card.getAttribute('data-streams').split(',');
+                    
+                    if (stream === 'all' || streams.includes(stream)) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        }
+    </script>
+</body>
+</html>

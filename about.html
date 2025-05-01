@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدرسة الدي حسين - مؤسسة تعليمية رائدة تهدف إلى تخريج جيل متميز أكاديمياً وخلقياً">
+    <title>مدرسة الداي حسين - من نحن</title>
+    <link rel="icon" type="image/png" href="assets/mini-logo.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="assets/images/about-bg.webp" as="image">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c5f8b;
+            --primary-light: #3a7cb9;
+            --primary-dark: #1d4b6f;
+            --secondary-color: #f8f9fa;
+            --accent-color: #e63946;
+            --accent-dark: #c1121f;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+            --text-color: #333333;
+            --text-light: #6c757d;
+            --font-base: 'Tajawal', sans-serif;
+            --border-radius-sm: 0.25rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-base);
+            color: var(--text-color);
+            background-color: var(--gray-100);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header Styles */
+        .main-header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            transition: all var(--transition-normal);
+        }
+
+        .main-header.scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            margin-left: var(--space-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .main-header.scrolled .logo img {
+            height: 50px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--primary-color);
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-sm);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--border-radius-sm);
+            transition: all var(--transition-fast);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--white);
+            background-color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--border-radius-sm);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+        }
+
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color);
+            position: relative;
+            transition: all var(--transition-normal);
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color);
+            transition: all var(--transition-normal);
+        }
+
+        .hamburger::before {
+            top: -6px;
+        }
+
+        .hamburger::after {
+            top: 6px;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger {
+            background-color: transparent;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        /* Page Banner */
+        .page-banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('assets/images/about-bg.webp');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: var(--space-xl) 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-sm);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-banner p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Section Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        section {
+            padding: var(--space-xl) 0;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: var(--space-lg) 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 50%;
+            width: 2px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-xl);
+            padding-right: 30px;
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--border-radius-md);
+            font-weight: 700;
+            margin-right: var(--space-lg);
+            box-shadow: var(--shadow-sm);
+            z-index: 1;
+        }
+
+        .timeline-content {
+            position: relative;
+            margin-right: calc(50% + var(--space-lg));
+            padding: var(--space-md);
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: 0;
+            margin-left: calc(50% + var(--space-lg));
+        }
+
+        /* Mission Section */
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .mission-card {
+            background-color: var(--white);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .mission-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .mission-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-md);
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(44, 95, 139, 0.1);
+            border-radius: 50%;
+            margin: 0 auto var(--space-md);
+        }
+
+        .mission-card ul {
+            text-align: right;
+            padding-right: var(--space-md);
+            list-style-position: inside;
+        }
+
+        .mission-card li {
+            margin-bottom: var(--space-xs);
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .team-member {
+            background-color: var(--white);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: all var(--transition-normal);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto var(--space-md);
+            border: 3px solid var(--primary-color);
+            transition: all var(--transition-normal);
+        }
+
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+
+        .team-member h3 {
+            color: var(--primary-color);
+            margin-bottom: var(--space-xs);
+        }
+
+        .team-member p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 0.25rem;
+        }
+
+        /* Footer Styles */
+        .main-footer {
+            background-color: var(--gray-800);
+            color: var(--white);
+        }
+
+        .footer-top {
+            padding: var(--space-xl) 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            font-size: 1.25rem;
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-col p {
+            color: var(--gray-400);
+            margin-bottom: var(--space-md);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: var(--gray-700);
+            color: var(--white);
+            border-radius: 50%;
+            transition: all var(--transition-fast);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-col a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+            padding-right: var(--space-xs);
+        }
+
+        .contact-info li, .working-hours li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-sm);
+            color: var(--gray-400);
+        }
+
+        .contact-info i, .working-hours i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            background-color: var(--gray-900);
+            padding: var(--space-md) 0;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .copyright {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .footer-links a {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: var(--space-md);
+            left: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        /* Accessibility Improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        [aria-current="page"] {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Focus styles for better accessibility */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid var(--primary-light);
+            outline-offset: 2px;
+        }
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .page-banner p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                right: 31px;
+            }
+
+            .timeline-item {
+                padding-right: 70px;
+            }
+
+            .timeline-year {
+                right: 0;
+                transform: none;
+            }
+
+            .timeline-content {
+                margin-right: 0;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 0;
+            }
+
+            .main-header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                position: absolute;
+                top: var(--space-md);
+                left: var(--space-md);
+            }
+            
+            .nav-list {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: var(--space-xl);
+                box-shadow: var(--shadow-lg);
+                transition: right var(--transition-normal);
+                z-index: 999;
+            }
+            
+            .nav-list.active {
+                right: 0;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .mission-grid, .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-xs);
+            }
+        }
+
+        /* Disclaimer Bar Styles */
+        .disclaimer-bar {
+            background-color: var(--gray-900);
+            padding: 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .disclaimer-text {
+            color: var(--white);
+            font-size: 0.8rem;
+            line-height: 1.5;
+            text-align: center;
+            margin: 0;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .disclaimer-text {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+    
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="شعار مدرسة الداي حسين" width="120" height="60">
+                    <div class="logo-text">
+                        <h1>مدرسة الداي حسين</h1>
+                        <p>نحن نبني قادة المستقبل</p>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="main-nav" aria-label="القائمة الرئيسية">
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-label="قائمة التنقل">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">قائمة التنقل</span>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="about.html" class="nav-link active" aria-current="page">من نحن</a></li>
+                    <li><a href="subjects.html" class="nav-link">المواد الدراسية</a></li>
+                    <li><a href="contact.html" class="nav-link">اتصل بنا</a></li>
+                    <li><a href="#" class="btn btn-primary">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Banner -->
+    <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('assets/images/about-bg.jpg')">
+        <div class="container">
+            <h1> من نحن </h1>
+            <p> تعرف على مؤسستنا و قيمنا و أهدافنا</p>
+        </div>
+    </section>
+
+    <!-- History Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>تاريخنا</h2>
+                <p>رحلة التميز منذ البداية</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">2005</div>
+                    <div class="timeline-content">
+                        <h3>التأسيس</h3>
+                        <p>تأسست مدرسة الداي حسين عام 2005 بفصول دراسية محدودة وبرؤية طموحة لتقديم تعليم متميز يجمع بين الأصالة والحداثة.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2010</div>
+                    <div class="timeline-content">
+                        <h3>التوسع الأول</h3>
+                        <p>تم افتتاح مبنى جديد لاستيعاب الأعداد المتزايدة من الطلاب وتوسيع المراحل التعليمية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-content">
+                        <h3>الاعتماد الأكاديمي</h3>
+                        <p>حصلت المدرسة على الاعتماد الأكاديمي من وزارة التربية الوطنية كواحدة من أفضل المدارس الخاصة في الولاية.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2023</div>
+                    <div class="timeline-content">
+                        <h3>الحرم الجامعي الحديث</h3>
+                        <p>افتتاح الحرم الجامعي الجديد بمرافق متطورة تواكب أحدث المعايير التعليمية العالمية.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="container">
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <i class="fas fa-eye" aria-hidden="true"></i>
+                    <h3>رؤيتنا</h3>
+                    <p>أن نكون المؤسسة التعليمية الرائدة في المنطقة من خلال تقديم تعليم متميز يعزز القيم الإسلامية والوطنية ويواكب التطورات العالمية.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-bullseye" aria-hidden="true"></i>
+                    <h3>رسالتنا</h3>
+                    <p>توفير بيئة تعليمية محفزة تمكن الطلاب من تحقيق التميز الأكاديمي وتنمية مهاراتهم الشخصية ليكونوا مواطنين صالحين وقادة للمستقبل.</p>
+                </div>
+                <div class="mission-card">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                    <h3>أهدافنا</h3>
+                    <ul>
+                        <li>تحقيق أعلى معدلات النجاح في الامتحانات الوطنية</li>
+                        <li>تنمية المواهب والقدرات الإبداعية</li>
+                        <li>تعزيز القيم الإسلامية والوطنية</li>
+                        <li>إعداد جيل قادر على مواكبة التطور التكنولوجي</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>فريق الإدارة</h2>
+                <p>الكوادر الإدارية التي تقود المدرسة</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="assets/images/team/director.png" alt="الدكتور أحمد زواوي - مدير المدرسة">
+                    <h3>الدكتور أحمد زواوي</h3>
+                    <p>مدير المدرسة</p>
+                    <p>دكتوراه في الإدارة التربوية مع 20 عامًا من الخبرة</p>
+                    <a href="#" class="sr-only">المزيد عن الدكتور أحمد زواوي</a>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/vice-director.png" alt="الأستاذة فاطمة بوعلام - نائب المدير للشؤون التعليمية"">
+                    <h3>الأستاذة فاطمة بوعلام</h3>
+                    <p>نائبة المدير للشؤون التعليمية</p>
+                    <p>ماجستير في المناهج وطرق التدريس</p>
+                    <a href="#" class="sr-only">المزيد عن الأستاذة فاطمة بوعلام</a>
+                </div>
+                <div class="team-member">
+                    <img src="assets/images/team/administrative.png" alt="الأستاذ خالد قاسمي - مدير الشؤون الإدارية">
+                    <h3>الأستاذ خالد قاسمي</h3>
+                    <p>مدير الشؤون الإدارية</p>
+                    <p>خبرة 15 عامًا في الإدارة المدرسية</p>
+                    <a href="#" class="sr-only">المزيد عن الأستاذ خالد قاسمي</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن المدرسة</h3>
+                        <p>مدرسة الداي حسين مؤسسة تعليمية خاصة تأسست عام 2005 بهدف تقديم تعليم متميز في بيئة تحترم القيم الإسلامية والوطنية.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="تويتر"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="subjects.html">المواد الدراسية</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                            <li><a href="#">تسجيل الدخول</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>اتصل بنا</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> شارع العربي بن مهيدي، الجزائر العاصمة</li>
+                            <li><i class="fas fa-phone" aria-hidden="true"></i> 023456789</li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> info@elhocine-school.dz</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>ساعات العمل</h3>
+                        <ul class="working-hours">
+                            <li><i class="far fa-clock" aria-hidden="true"></i> الأحد - الخميس: 8:00 ص - 4:00 م</li>
+                            <li><i class="far fa-clock" aria-hidden="true"></i> الجمعة - السبت: مغلق</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; <span id="current-year"></span> مدرسة الدي حسين. جميع الحقوق محفوظة.</p>
+                    
+                    <div class="footer-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الاستخدام</a>
+                        <a href="#">خريطة الموقع</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="back-to-top" aria-label="العودة إلى الأعلى">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>
+    </footer>
+
+    <!-- Disclaimer -->
+    <nav class="disclaimer-bar">
+        <div class="container">
+          <p class="disclaimer-text">
+            هذا الموقع هو نموذج أولي تم تطويره لأغراض عرض الأعمال فقط. لا يرتبط بأي شركة حقيقية ولا يُقصد به الاستخدام التجاري. جميع المحتويات المعروضة إما خيالية أو تُستخدم لأغراض تعليمية وتوضيحية فقط.
+          </p>
+        </div>
+      </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+            navList.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Sticky header on scroll
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Animate timeline items on scroll
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        
+        function animateOnScroll() {
+            timelineItems.forEach(item => {
+                const itemPosition = item.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if (itemPosition < screenPosition) {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }
+            });
+        }
+
+        // Set initial state for animation
+        timelineItems.forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = index % 2 === 0 ? 'translateX(50px)' : 'translateX(-50px)';
+            item.style.transition = 'all 0.5s ease';
+        });
+
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        }
+    </script>
+</body>
+</html>

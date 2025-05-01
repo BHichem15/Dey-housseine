@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="مدرسة الدي حسين - مؤسسة تعليمية رائدة تهدف إلى تخريج جيل متميز أكاديمياً وخلقياً">
+    <title>مدرسة الداي حسين - اتصل بنا</title>
+    <link rel="icon" type="image/png" href="assets/mini-logo.png">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" as="style">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link rel="preload" href="assets/images/contact-bg.webp" as="image">
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c5f8b;
+            --primary-light: #3a7cb9;
+            --primary-dark: #1d4b6f;
+            --secondary-color: #f8f9fa;
+            --accent-color: #e63946;
+            --accent-dark: #c1121f;
+            --white: #ffffff;
+            --gray-100: #f8f9fa;
+            --gray-200: #e9ecef;
+            --gray-300: #dee2e6;
+            --gray-400: #ced4da;
+            --gray-500: #adb5bd;
+            --gray-600: #6c757d;
+            --gray-700: #495057;
+            --gray-800: #343a40;
+            --gray-900: #212529;
+            --text-color: #333333;
+            --text-light: #6c757d;
+            --font-base: 'Tajawal', sans-serif;
+            --border-radius-sm: 0.25rem;
+            --border-radius-md: 0.5rem;
+            --border-radius-lg: 0.75rem;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+            --transition-fast: 0.15s ease;
+            --transition-normal: 0.3s ease;
+            --transition-slow: 0.5s ease;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-base);
+            color: var(--text-color);
+            background-color: var(--gray-100);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header Styles */
+        .main-header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: var(--space-sm) 0;
+            transition: all var(--transition-normal);
+        }
+
+        .main-header.scrolled {
+            padding: var(--space-xs) 0;
+            box-shadow: var(--shadow-md);
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .logo img {
+            height: 60px;
+            width: auto;
+            margin-left: var(--space-sm);
+            transition: all var(--transition-normal);
+        }
+
+        .main-header.scrolled .logo img {
+            height: 50px;
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            margin-bottom: 0.25rem;
+            color: var(--primary-color);
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: var(--text-light);
+        }
+
+        /* Navigation */
+        /* Navigation */
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: var(--space-sm);
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            padding: var(--space-xs) var(--space-sm);
+            border-radius: var(--border-radius-sm);
+            transition: all var(--transition-fast);
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--white);
+            background-color: var(--primary-color);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: var(--space-xs) var(--space-md);
+            border-radius: var(--border-radius-sm);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .btn-secondary {
+            background-color: var(--white);
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-sm);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: var(--space-xs);
+        }
+
+        .hamburger {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color);
+            position: relative;
+            transition: all var(--transition-normal);
+        }
+
+        .hamburger::before,
+        .hamburger::after {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: var(--text-color);
+            transition: all var(--transition-normal);
+        }
+
+        .hamburger::before {
+            top: -6px;
+        }
+
+        .hamburger::after {
+            top: 6px;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger {
+            background-color: transparent;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger::before {
+            transform: rotate(45deg);
+            top: 0;
+        }
+
+        .mobile-menu-toggle[aria-expanded="true"] .hamburger::after {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        /* Page Banner */
+        .page-banner {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('assets/images/contact-bg.webp');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: var(--space-xl) 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-banner h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-sm);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .page-banner p {
+            font-size: 1.25rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Section Styles */
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary-color);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        section {
+            padding: var(--space-xl) 0;
+        }
+
+        /* Contact Info Section */
+        .contact-info-section {
+            padding: var(--space-xl) 0;
+            background-color: var(--white);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .contact-card {
+            background-color: var(--secondary-color);
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-md);
+            text-align: center;
+            transition: all var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .contact-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--space-sm);
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(44, 95, 139, 0.1);
+            border-radius: 50%;
+            margin: 0 auto var(--space-sm);
+        }
+
+        .contact-card h3 {
+            margin-bottom: var(--space-sm);
+            color: var(--primary-color);
+        }
+
+        .contact-card p {
+            margin-bottom: 0.25rem;
+        }
+
+        /* Contact Form Section */
+        .contact-form-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            background-color: var(--white);
+            padding: var(--space-xl);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .form-content h2 {
+            margin-bottom: var(--space-sm);
+            color: var(--primary-color);
+        }
+
+        .form-content p {
+            margin-bottom: var(--space-lg);
+            color: var(--text-light);
+        }
+
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-md);
+        }
+
+        label {
+            display: block;
+            margin-bottom: var(--space-xs);
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: var(--space-sm);
+            border: 1px solid var(--gray-300);
+            border-radius: var(--border-radius-sm);
+            font-family: var(--font-base);
+            transition: all var(--transition-fast);
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(44, 95, 139, 0.1);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .error-message {
+            display: none;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            margin-top: var(--space-xs);
+        }
+
+        .form-actions {
+            margin-top: var(--space-lg);
+        }
+
+        .btn-icon {
+            margin-right: var(--space-xs);
+        }
+
+        /* Map Container */
+        .map-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+        }
+
+        .map-wrapper {
+            height: 400px;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .transport-info {
+            background-color: var(--secondary-color);
+            padding: var(--space-md);
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .transport-info h3 {
+            margin-bottom: var(--space-sm);
+            color: var(--primary-color);
+        }
+
+        .transport-info ul {
+            list-style: none;
+        }
+
+        .transport-info li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xs);
+        }
+
+        .transport-info i {
+            color: var(--primary-color);
+            min-width: 20px;
+        }
+
+        /* FAQ Section */
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: var(--space-sm);
+            border: 1px solid var(--gray-300);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: var(--space-md);
+            background-color: var(--white);
+            border: none;
+            text-align: right;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            font-family: var(--font-base);
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .faq-question:hover {
+            background-color: var(--gray-100);
+        }
+
+        .faq-question i {
+            transition: transform var(--transition-fast);
+            margin-left: var(--space-sm);
+        }
+
+        .faq-question.active {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        .faq-question.active i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            padding: 0 var(--space-md);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-normal);
+            background-color: var(--gray-100);
+        }
+
+        .faq-answer.active {
+            padding: var(--space-md);
+            max-height: 500px;
+        }
+
+        .faq-answer ul {
+            padding-right: var(--space-md);
+            margin-top: var(--space-sm);
+        }
+
+        .faq-more {
+            text-align: center;
+            margin-top: var(--space-xl);
+        }
+
+        .faq-more a {
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .faq-more a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Styles */
+        .main-footer {
+            background-color: var(--gray-800);
+            color: var(--white);
+        }
+
+        .footer-top {
+            padding: var(--space-xl) 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .footer-col h3 {
+            color: var(--white);
+            margin-bottom: var(--space-md);
+            font-size: 1.25rem;
+            position: relative;
+            padding-bottom: var(--space-xs);
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        .footer-col p {
+            color: var(--gray-400);
+            margin-bottom: var(--space-md);
+        }
+
+        .social-links {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: var(--gray-700);
+            color: var(--white);
+            border-radius: 50%;
+            transition: all var(--transition-fast);
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: var(--space-xs);
+        }
+
+        .footer-col a {
+            color: var(--gray-400);
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-col a:hover {
+            color: var(--white);
+            padding-right: var(--space-xs);
+        }
+
+        .contact-info li, .working-hours li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-xs);
+            margin-bottom: var(--space-sm);
+            color: var(--gray-400);
+        }
+
+        .contact-info i, .working-hours i {
+            color: var(--primary-color);
+            margin-top: 3px;
+        }
+
+        .footer-bottom {
+            background-color: var(--gray-900);
+            padding: var(--space-md) 0;
+        }
+
+        .footer-bottom-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .copyright {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+        }
+
+        .footer-links a {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: var(--space-md);
+            left: var(--space-md);
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            opacity: 0;
+            visibility: hidden;
+            transition: all var(--transition-normal);
+            z-index: 999;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-3px);
+        }
+
+        /* Accessibility Improvements */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
+        [aria-current="page"] {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        /* Focus styles for better accessibility */
+        a:focus, button:focus, input:focus, select:focus, textarea:focus {
+            outline: 2px solid var(--primary-light);
+            outline-offset: 2px;
+        }
+
+        /* Skip to content link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            z-index: 100;
+            transition: top 0.3s;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .contact-form-container {
+                grid-template-columns: 1fr;
+            }
+
+            .map-container {
+                margin-top: var(--space-xl);
+            }
+
+            .page-banner h1 {
+                font-size: 2rem;
+            }
+            
+            .page-banner p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .main-header .container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+                position: absolute;
+                top: var(--space-md);
+                left: var(--space-md);
+            }
+            
+            .nav-list {
+                position: fixed;
+                top: 80px;
+                right: -100%;
+                width: 80%;
+                height: calc(100vh - 80px);
+                background-color: var(--white);
+                flex-direction: column;
+                align-items: flex-start;
+                padding: var(--space-xl);
+                box-shadow: var(--shadow-lg);
+                transition: right var(--transition-normal);
+                z-index: 999;
+            }
+            
+            .nav-list.active {
+                right: 0;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-xs);
+            }
+        }
+
+        /* Disclaimer Bar Styles */
+        .disclaimer-bar {
+            background-color: var(--gray-900);
+            padding: 15px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            z-index: 10;
+        }
+
+        .disclaimer-text {
+            color: var(--white);
+            font-size: 0.8rem;
+            line-height: 1.5;
+            text-align: center;
+            margin: 0;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        @media (max-width: 768px) {
+            .disclaimer-text {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to content link -->
+    <a href="#main-content" class="skip-link">انتقل إلى المحتوى الرئيسي</a>
+    
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="logo-wrapper">
+                <a href="index.html" class="logo">
+                    <img src="assets/logo.png" alt="شعار مدرسة الداي حسين" width="120" height="60">
+                    <div class="logo-text">
+                        <h1>مدرسة الداي حسين</h1>
+                        <p>نحن نبني قادة المستقبل</p>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="main-nav" aria-label="القائمة الرئيسية">
+                <button class="mobile-menu-toggle" aria-expanded="false" aria-label="قائمة التنقل">
+                    <span class="hamburger"></span>
+                    <span class="sr-only">قائمة التنقل</span>
+                </button>
+                
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                    <li><a href="about.html" class="nav-link">من نحن</a></li>
+                    <li><a href="subjects.html" class="nav-link">المواد الدراسية</a></li>
+                    <li><a href="contact.html" class="nav-link active" aria-current="page">اتصل بنا</a></li>
+                    <li><a href="#" class="btn btn-primary">تسجيل الدخول</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Banner -->
+    <section class="page-banner" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('assets/images/contact-bg.jpg')">
+        <div class="container">
+            <h1>اتصل بنا </h1>
+            <p>نحن هنا للإجابة على كل استفساراتكم</p>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                    <h3>العنوان</h3>
+                    <p>شارع العربي بن مهيدي، رقم 15</p>
+                    <p>الجزائر العاصمة، الجزائر</p>
+                    <button class="btn btn-outline" onclick="scrollToMap()">عرض على الخريطة</button>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                    <h3>الهاتف</h3>
+                    <p>023 45 67 89</p>
+                    <p>055 55 55 555 (موبايل)</p>
+                    <a href="tel:023456789" class="btn btn-outline">اتصل بنا</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                    <h3>البريد الإلكتروني</h3>
+                    <p>info@elhocine-school.dz</p>
+                    <p>admission@elhocine-school.dz</p>
+                    <a href="mailto:info@elhocine-school.dz" class="btn btn-outline">أرسل رسالة</a>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                    <h3>ساعات العمل</h3>
+                    <p>الأحد - الخميس: 8:00 ص - 4:00 م</p>
+                    <p>الجمعة - السبت: مغلق</p>
+                    <button class="btn btn-outline" onclick="openAppointmentModal()">حجز موعد</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form and Map -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-form-container">
+                <div class="form-content">
+                    <h2>أرسل لنا رسالة</h2>
+                    <p>سنكون سعداء بالرد على استفساراتكم في أقرب وقت ممكن</p>
+                    
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل *</label>
+                            <input type="text" id="name" name="name" required>
+                            <span class="error-message" id="nameError">الرجاء إدخال الاسم الكامل</span>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">البريد الإلكتروني *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message" id="emailError">الرجاء إدخال بريد إلكتروني صحيح</span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">رقم الهاتف</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">الموضوع *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>اختر موضوع الرسالة</option>
+                                <option value="admission">استفسار عن القبول والتسجيل</option>
+                                <option value="academic">استفسار أكاديمي</option>
+                                <option value="fees">استفسار عن الرسوم</option>
+                                <option value="transport">استفسار عن النقل المدرسي</option>
+                                <option value="other">موضوع آخر</option>
+                            </select>
+                            <span class="error-message" id="subjectError">الرجاء اختيار موضوع الرسالة</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <span class="error-message" id="messageError">الرجاء كتابة رسالتك</span>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <span class="btn-text">إرسال الرسالة</span>
+                                <i class="fas fa-paper-plane btn-icon" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="map-container" id="map-section">
+                    <h2>موقعنا على الخريطة</h2>
+                    <div class="map-wrapper">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25580.29336564451!2d3.0585833697753816!3d36.75389999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb25889522a2d%3A0xb74d6a9c329c5d25!2sAlgiers%2C%20Algeria!5e0!3m2!1sen!2sus!4v1685555555555!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="خريطة موقع مدرسة الداي حسين"></iframe>
+                    </div>
+                    
+                    <div class="transport-info">
+                        <h3>مواصلات النقل المدرسي</h3>
+                        <ul>
+                            <li><i class="fas fa-bus" aria-hidden="true"></i> الخط 1: حي النصر - المدرسة (7:30 ص)</li>
+                            <li><i class="fas fa-bus" aria-hidden="true"></i> الخط 2: حي السلام - المدرسة (7:45 ص)</li>
+                            <li><i class="fas fa-bus" aria-hidden="true"></i> الخط 3: حي الأمل - المدرسة (8:00 ص)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>أسئلة متكررة</h2>
+                <p>إجابات على أكثر الاستفسارات شيوعًا</p>
+            </div>
+            
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq1-answer">
+                        ما هي وثائق التسجيل المطلوبة؟
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="faq1-answer" class="faq-answer">
+                        <p>للتسجيل في المدرسة، يرجى إحضار الوثائق التالية:</p>
+                        <ul>
+                            <li>شهادة ميلاد الطالب (أصل + نسخة)</li>
+                            <li>صور شمسية حديثة (4 نسخ)</li>
+                            <li>كشف نقاط السنة الدراسية السابقة (إن وجد)</li>
+                            <li>بطاقة التعريف الوطنية لولي الأمر (نسخة)</li>
+                            <li>شهادة السكنى</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq2-answer">
+                        ما هي ساعات الدوام المدرسي؟
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="faq2-answer" class="faq-answer">
+                        <p>ساعات الدوام المدرسي حسب المراحل:</p>
+                        <ul>
+                            <li>الابتدائي: من 8:00 صباحًا إلى 12:30 ظهرًا</li>
+                            <li>المتوسط: من 8:00 صباحًا إلى 3:00 عصرًا</li>
+                            <li>الثانوي: من 8:00 صباحًا إلى 4:00 عصرًا</li>
+                        </ul>
+                        <p>مع وجود أنشطة مسائية اختيارية من 4:00 إلى 6:00 مساءً.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" aria-controls="faq3-answer">
+                        هل توجد أنشطة لا صفية؟
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div id="faq3-answer" class="faq-answer">
+                        <p>نعم، تقدم المدرسة مجموعة متنوعة من الأنشطة اللاصفية:</p>
+                        <ul>
+                            <li>النشاط الرياضي: كرة قدم، كرة سلة، مصارعة، جمباز</li>
+                            <li>النشاط الثقافي: مسرح، خطابة، مناظرات</li>
+                            <li>النشاط الفني: رسم، موسيقى، أشغال يدوية</li>
+                            <li>النشاط العلمي: نادي العلوم، مسابقات علمية</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-more">
+                <p>لم تجد إجابة لسؤالك؟ <a href="#contactForm">اضغط هنا لطرح سؤال جديد</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col">
+                        <h3>عن المدرسة</h3>
+                        <p>مدرسة الدي حسين مؤسسة تعليمية خاصة تأسست عام 2005 بهدف تقديم تعليم متميز في بيئة تحترم القيم الإسلامية والوطنية.</p>
+                        <div class="social-links">
+                            <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="تويتر"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="إنستغرام"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                            <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>روابط سريعة</h3>
+                        <ul>
+                            <li><a href="index.html">الرئيسية</a></li>
+                            <li><a href="about.html">من نحن</a></li>
+                            <li><a href="subjects.html">المواد الدراسية</a></li>
+                            <li><a href="contact.html">اتصل بنا</a></li>
+                            <li><a href="#">تسجيل الدخول</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>اتصل بنا</h3>
+                        <ul class="contact-info">
+                            <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> شارع العربي بن مهيدي، الجزائر العاصمة</li>
+                            <li><i class="fas fa-phone" aria-hidden="true"></i> 023456789</li>
+                            <li><i class="fas fa-envelope" aria-hidden="true"></i> info@elhocine-school.dz</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-col">
+                        <h3>ساعات العمل</h3>
+                        <ul class="working-hours">
+                            <li><i class="far fa-clock" aria-hidden="true"></i> الأحد - الخميس: 8:00 ص - 4:00 م</li>
+                            <li><i class="far fa-clock" aria-hidden="true"></i> الجمعة - السبت: مغلق</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="copyright">&copy; <span id="current-year"></span> مدرسة الداي حسين. جميع الحقوق محفوظة.</p>
+                    
+                    <div class="footer-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الاستخدام</a>
+                        <a href="#">خريطة الموقع</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="back-to-top" aria-label="العودة إلى الأعلى">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="appointmentModal" class="modal" role="dialog" aria-hidden="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="إغلاق النافذة">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+            <h2 id="modalTitle">حجز موعد</h2>
+            <form id="appointmentForm">
+                <div class="form-group">
+                    <label for="appointment-name">الاسم الكامل *</label>
+                    <input type="text" id="appointment-name" name="appointment-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-phone">رقم الهاتف *</label>
+                    <input type="tel" id="appointment-phone" name="appointment-phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-date">التاريخ المفضل *</label>
+                    <input type="date" id="appointment-date" name="appointment-date" required>
+                </div>
+                <div class="form-group">
+                    <label for="appointment-time">الوقت المفضل *</label>
+                    <select id="appointment-time" name="appointment-time" required>
+                        <option value="" disabled selected>اختر الوقت</option>
+                        <option value="morning">الصباح (8:00 ص - 12:00 ظ)</option>
+                        <option value="afternoon">بعد الظهر (1:00 ظ - 4:00 م)</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">تأكيد الحجز</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Disclaimer -->
+
+    <nav class="disclaimer-bar">
+        <div class="container">
+          <p class="disclaimer-text">
+            هذا الموقع هو نموذج أولي تم تطويره لأغراض عرض الأعمال فقط. لا يرتبط بأي شركة حقيقية ولا يُقصد به الاستخدام التجاري. جميع المحتويات المعروضة إما خيالية أو تُستخدم لأغراض تعليمية وتوضيحية فقط.
+          </p>
+        </div>
+      </nav>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navList = document.querySelector('.nav-list');
+
+        mobileMenuToggle.addEventListener('click', () => {
+            const isExpanded = mobileMenuToggle.getAttribute('aria-expanded') === 'true';
+            mobileMenuToggle.setAttribute('aria-expanded', !isExpanded);
+            navList.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+                mobileMenuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Sticky header on scroll
+        const header = document.querySelector('.main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to map section
+        function scrollToMap() {
+            const mapSection = document.getElementById('map-section');
+            if (mapSection) {
+                mapSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll('.faq-question');
+        
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const isExpanded = question.getAttribute('aria-expanded') === 'true';
+                const answer = document.getElementById(question.getAttribute('aria-controls'));
+                
+                // Close all other items
+                faqQuestions.forEach(q => {
+                    if (q !== question) {
+                        q.setAttribute('aria-expanded', 'false');
+                        q.classList.remove('active');
+                        document.getElementById(q.getAttribute('aria-controls')).classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                question.setAttribute('aria-expanded', !isExpanded);
+                question.classList.toggle('active');
+                answer.classList.toggle('active');
+            });
+        });
+
+        // Form validation
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+            
+            // Validate name
+            const nameInput = document.getElementById('name');
+            const nameError = document.getElementById('nameError');
+            if (nameInput.value.trim() === '') {
+                nameError.style.display = 'block';
+                nameInput.classList.add('error');
+                isValid = false;
+            } else {
+                nameError.style.display = 'none';
+                nameInput.classList.remove('error');
+            }
+            
+            // Validate email
+            const emailInput = document.getElementById('email');
+            const emailError = document.getElementById('emailError');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailError.style.display = 'block';
+                emailInput.classList.add('error');
+                isValid = false;
+            } else {
+                emailError.style.display = 'none';
+                emailInput.classList.remove('error');
+            }
+            
+            // Validate subject
+            const subjectInput = document.getElementById('subject');
+            const subjectError = document.getElementById('subjectError');
+            if (subjectInput.value === '') {
+                subjectError.style.display = 'block';
+                subjectInput.classList.add('error');
+                isValid = false;
+            } else {
+                subjectError.style.display = 'none';
+                subjectInput.classList.remove('error');
+            }
+            
+            // Validate message
+            const messageInput = document.getElementById('message');
+            const messageError = document.getElementById('messageError');
+            if (messageInput.value.trim() === '') {
+                messageError.style.display = 'block';
+                messageInput.classList.add('error');
+                isValid = false;
+            } else {
+                messageError.style.display = 'none';
+                messageInput.classList.remove('error');
+            }
+            
+            if (isValid) {
+                // Form is valid, submit it
+                alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريبًا.');
+                contactForm.reset();
+            } else {
+                // Scroll to first error
+                const firstError = document.querySelector('.error');
+                if (firstError) {
+                    firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        });
+
+        // Modal functionality
+        const modal = document.getElementById('appointmentModal');
+        
+        function openAppointmentModal() {
+            modal.setAttribute('aria-hidden', 'false');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeModal() {
+            modal.setAttribute('aria-hidden', 'true');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        document.querySelector('.modal-close').addEventListener('click', closeModal);
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+        
+        // Appointment form
+        const appointmentForm = document.getElementById('appointmentForm');
+        
+        appointmentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('تم حجز الموعد بنجاح! سنتواصل معك لتأكيد التفاصيل.');
+            appointmentForm.reset();
+            closeModal();
+        });
+
+        // Back to top button
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Update current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.dataset.src;
+            });
+        }
+    </script>
+</body>
+</html>
